@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BookReader.ResultPage"
-             Title="ResultPage"
-             BackgroundColor="Silver">
+             Title="Találati lista"
+             BackgroundColor="#f5f4f0">
     <VerticalStackLayout>
         <ListView x:Name="lvResultList" ItemsSource="{Binding}">
             <ListView.ItemTemplate>
@@ -33,9 +33,10 @@
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"
                                     BackgroundColor="Transparent"
+                                    TextColor="Black"
                                     Text="Megnyitás"
                                     BorderWidth="1.5"
-                                    BorderColor="Azure"
+                                    BorderColor="SaddleBrown"
                                     CornerRadius="30"
                                     Clicked="btOpen_Clicked"
                                     />

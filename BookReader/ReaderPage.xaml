@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BookReader.ReaderPage"
-             Title="ReaderPage"
-             BackgroundColor="Silver">
+             Title="Olvasó"
+             BackgroundColor="#f5f4f0">
     <Grid Margin="20" RowDefinitions="Auto,*,Auto">
         
-        <Label x:Name="tbAuthorAndTitle" Text="Cím és Író" HorizontalOptions="Center" TextColor="White"/>
+        <Label x:Name="tbAuthorAndTitle" Text="Cím és Író" HorizontalOptions="Center" TextColor="Black"/>
 
         <ScrollView x:Name="svText" 
                     Grid.Row="1"
@@ -15,7 +15,7 @@
             <StackLayout>
                 <Label x:Name="tbText"
                        Text="{Binding}" 
-                       TextColor="White"/>
+                       TextColor="Black"/>
             </StackLayout>
         </ScrollView>
     </Grid>

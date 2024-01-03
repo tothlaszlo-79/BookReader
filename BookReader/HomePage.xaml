@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BookReader.HomePage"
-             Title="HomePage"
+             Title="Kezdő oldal"
              BackgroundColor="#f5f4f0">
     <VerticalStackLayout VerticalOptions="Center">
         <Label 
             Text="Keresés a könyvek között:"
             TextColor="Black"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="0,20,0,20"/>
         <Entry x:Name="tbAuthor" Placeholder="Szerző" TextColor="Black" PlaceholderColor="Grey"></Entry>
         <Entry x:Name="tbTitle" Placeholder="Cím" TextColor="Black" PlaceholderColor="Grey"></Entry>
 
