@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookReader.HomePage"
+             Title="HomePage"
+             BackgroundColor="#f5f4f0">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Label 
+            Text="Keresés a könyvek között:"
+            TextColor="Black"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="tbAuthor" Placeholder="Szerző" TextColor="Black" PlaceholderColor="Grey"></Entry>
+        <Entry x:Name="tbTitle" Placeholder="Cím" TextColor="Black" PlaceholderColor="Grey"></Entry>
+
+        <Picker x:Name="pGenre" Title="Műfaj" TitleColor="Grey" TextColor="Black" ItemsSource="{Binding}" WidthRequest="600" MinimumWidthRequest="100"></Picker>
+
+        <Button x:Name="btSearch"
+                VerticalOptions="Center" 
+                Text="Keresés"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                BorderColor="SaddleBrown"
+                BorderWidth="1.5"
+                Margin="20,40,20,0"
+                CornerRadius="30"
+                Clicked="btSearch_Clicked"
+        ></Button>
+    </VerticalStackLayout>
+</ContentPage>

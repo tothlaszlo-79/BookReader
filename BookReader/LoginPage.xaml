@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookReader.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="#f5f4f0"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <Entry x:Name="tbUID" Placeholder="Felhasználónév" TextColor="Black" PlaceholderColor="Grey"></Entry>
+        <Entry x:Name="tbPWD" Placeholder="Jelszó" IsPassword="True" TextColor="black" PlaceholderColor="Grey"></Entry>
+        <Button x:Name="btLogin"
+                VerticalOptions="Center" 
+                Text="Belépés"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                BorderColor="SaddleBrown"
+                BorderWidth="1.5"
+                Margin="0,40,0,0"
+                CornerRadius="30"
+                Clicked="Button_Clicked"
+                ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
