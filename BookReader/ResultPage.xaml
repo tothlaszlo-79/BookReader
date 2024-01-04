@@ -21,10 +21,11 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            
-                            <Label Grid.Row="0" Grid.Column="0" Text="Szerző" FontAttributes="Bold"/>
-                            <Label Grid.Row="1" Grid.Column="0" Text="Cím" FontAttributes="Bold"/>
-                            <Label Grid.Row="2" Grid.Column="0" Text="Minta" FontAttributes="Bold"/>
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" IsVisible="false"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Author}" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Title}" FontAttributes="Bold"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Description}" FontAttributes="Bold"/>
 
                             <Button x:Name="btOpen"
                                     Grid.Row="0"

@@ -1,36 +1,38 @@
 
+using BookReader.Models;
+
 namespace BookReader;
 
 public partial class ResultPage : ContentPage
 {
+
+    List<Book> _books;
+
 	public ResultPage()
 	{
 		InitializeComponent();
-		lvResultList.ItemsSource = AddBoooks();
-
-    }
-
-
-	private List<Books> AddBoooks()
-	{
-		List<Books> list = new List<Books>();
 		
-		list.Add(new Books { Author = "Teszt1", Title = "Cim 1", Example = "Minta 1" });
-        list.Add(new Books { Author = "Teszt2", Title = "Cim 2", Example = "Minta 2" });
-        list.Add(new Books { Author = "Teszt3", Title = "Cim 3", Example = "Minta 3" });
 
-		return list;
     }
 
-	public class Books
+	public ResultPage(List<Book> books)
 	{
-        public string Author { get; set; }
-        public string Title { get; set; }
-        public string Example { get; set; }
+        InitializeComponent();
+        lvResultList.ItemsSource = books;
+        _books = books;
+
     }
+    
 
     private void btOpen_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new ReaderPage());
+        Button button = (Button)sender;
+        Grid listviewItem = (Grid)button.Parent;
+
+        var _id = ((Label)listviewItem.Children[0]).Text;
+        var _selectedRecord = _books.FirstOrDefault(b => b.Id == Int32.Parse(_id));
+
+
+        Navigation.PushAsync(new ReaderPage(_selectedRecord.Example));
     }
 }
